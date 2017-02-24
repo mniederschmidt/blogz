@@ -35,3 +35,9 @@ indexes:
   properties:
   - name: user=
   - name: created
+
+- kind: Post
+  properties:
+  - name: username
+  - name: created
+    direction: desc
