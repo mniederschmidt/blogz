@@ -19,7 +19,7 @@ class BlogHandler(webapp2.RequestHandler):
             Get all posts by a specific user, ordered by creation date (descending).
             The user parameter will be a User object.
         """
-        query = Post.all().filter("username", user.username).order('-created')
+        query = Post.all().filter("author = ", user).order('-created')
         return query.fetch(limit=limit, offset=offset)
 
 
